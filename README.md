@@ -34,11 +34,13 @@ A simple Java console application using **Jakarta Persistence (JPA)** to manage 
 - `name`
 - `specialty`
 
+
 ### 🗂️ Project
 - `id` (auto-generated)
 - `title`
 - `designer` (Many-to-One)
 - `tools` (Many-to-Many)
+
 
 ### 🧪 Tool
 - `id` (auto-generated)
@@ -96,9 +98,13 @@ graphics-design-manager/
 🗄 Database Schema
 
 •	designer
+
 •	project
+
 •	tool
+
 •	project_tools (join table for many-to-many)
+
 
 🧑 designer
 sql
@@ -108,6 +114,9 @@ CREATE TABLE designer (
     name VARCHAR(255),
     specialty VARCHAR(255)
 );
+
+
+
 📁 project
 sql
 Copy code
@@ -117,6 +126,9 @@ CREATE TABLE project (
     designer_id INTEGER,
     FOREIGN KEY (designer_id) REFERENCES designer(id)
 );
+
+
+
 🛠 tool
 sql
 Copy code
@@ -125,6 +137,9 @@ CREATE TABLE tool (
     name VARCHAR(255),
     version VARCHAR(255)
 );
+
+
+
 🔗 project_tools (join table)
 sql
 Copy code
