@@ -1,4 +1,4 @@
- # 🎨 Graphics Design Manager
+ # 🎨 Graphics Design Management System
 
 A simple Java console application using **Jakarta Persistence (JPA)** to manage Designers, Projects, and Tools for a digital design studio.
 
