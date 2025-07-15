@@ -155,7 +155,7 @@ CREATE TABLE project_tools (
 📞Contact:-
 For any questions or feedback, feel free to reach out:
 
-Your Name : prajkta more,Pornima kavade
+Your Name : Prajkta more,Pornima kavade
 
 Email: prajktamore63@gmail.com
 
