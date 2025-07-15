@@ -52,27 +52,46 @@ css
 Copy code
 graphics-design-manager/
 ├── src/
+
 │   ├── main/
+
 │   │   ├── java/
+
 │   │   │   └── app/
+
 │   │   │       └── Main.java
+
 │   │   │
 │   │   │   └── entity/
+
 │   │   │       ├── Designer.java
+
 │   │   │       ├── Project.java
+
 │   │   │       └── Tool.java
+
 │   │   │
 │   │   └── resources/
+
+
 │   │       └── META-INF/
+
 │   │           └── persistence.xml
+
 │   │
 │   └── test/
+
 │       └── java/
+
 │           └── (optional test classes)
+
 │
 ├── .gitignore
+
 ├── pom.xml
+
 └── README.md
+
 
 📦 Maven Dependencies
 
@@ -107,48 +126,63 @@ graphics-design-manager/
 
 
 🧑 designer
-sql
-Copy code
+
 CREATE TABLE designer (
+
     id SERIAL PRIMARY KEY,
+    
     name VARCHAR(255),
+    
     specialty VARCHAR(255)
+    
 );
 
 
 
 📁 project
-sql
-Copy code
+
 CREATE TABLE project (
+
     id SERIAL PRIMARY KEY,
+    
     title VARCHAR(255),
+    
     designer_id INTEGER,
+    
     FOREIGN KEY (designer_id) REFERENCES designer(id)
+    
 );
 
 
 
 🛠 tool
-sql
-Copy code
+
 CREATE TABLE tool (
+
     id SERIAL PRIMARY KEY,
+    
     name VARCHAR(255),
+    
     version VARCHAR(255)
+    
 );
 
 
 
 🔗 project_tools (join table)
-sql
-Copy code
+
 CREATE TABLE project_tools (
+
     project_id INTEGER,
+    
     tool_id INTEGER,
+    
     PRIMARY KEY (project_id, tool_id),
+    
     FOREIGN KEY (project_id) REFERENCES project(id),
+    
     FOREIGN KEY (tool_id) REFERENCES tool(id)
+    
 );
 
 
